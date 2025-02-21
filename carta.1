@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Especial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #7d9eed; /* Azul parecido com o da imagem */
+            font-family: "Dancing Script", cursive;
+        }
+
+        .tela-inicial {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .tela-inicial h1 {
+            font-size: 28px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .envelope {
+            width: 250px; /* Aumentado o tamanho do envelope */
+            height: 175px; /* Aumentado o tamanho do envelope */
+            background-color: white;
+            border: 2px solid black;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .envelope::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 125px solid transparent; /* Aumentado para manter o equilíbrio */
+            border-right: 125px solid transparent; /* Aumentado para manter o equilíbrio */
+            border-bottom: 85px solid white; /* Aumentado para combinar com o tamanho do envelope */
+        }
+
+        .coracao {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 28px; /* Aumentado o tamanho do coração */
+            color: red;
+        }
+
+        .carta {
+            display: none;
+            width: 450px; /* Aumentado o tamanho da carta */
+            padding: 40px; /* Aumentado o padding para mais espaço interno */
+            background-color: #fef2e0;
+            border: 2px solid #b38b6d;
+            border-radius: 10px;
+            text-align: center;
+            font-family: "Dancing Script", cursive;
+            font-size: 26px; /* Aumentado o tamanho do texto */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.6; /* Melhorar o espaçamento entre as linhas */
+        }
+
+        .mensagem {
+            position: absolute;
+            bottom: 30px; /* Colocado no canto inferior */
+            right: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #b38b6d;
+        }
+
+        .botao-fechar {
+            margin-top: 10px; /* Ajustado o espaçamento do botão */
+            padding: 8px 15px; /* Aumentei o tamanho do botão */
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            font-size: 16px; /* Aumentei o tamanho da fonte do botão */
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .botao-fechar:hover {
+            background-color: #e84141;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tela-inicial">
+        <h1>Oi, tenho uma carta para você! </h1>
+        <div class="envelope" onclick="abrirCarta()">
+            <div class="coracao">❤️</div>
+        </div>
+    </div>
+
+    <div class="carta" id="carta">
+        <p>Querida Nathália,</p>
+        <p>envio essa carta na busca de fugir da rotina;</p>
+        <p>Que tal uma cerveja e um bom papo qualquer dia desses? </p>
+        <div class="mensagem">
+            Beijos, <br>A.
+        </div>
+        <button class="botao-fechar" onclick="fecharCarta()">Fechar</button>
+    </div>
+
+    <script>
+        function abrirCarta() {
+            document.getElementById("carta").style.display = "block";
+        }
+
+        function fecharCarta() {
+            document.getElementById("carta").style.display = "none";
+        }
+    </script>
+
+</body>
+</html> 
