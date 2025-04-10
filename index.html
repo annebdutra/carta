@@ -18,7 +18,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #7d9eed; /* Azul parecido com o da imagem */
+            background-color: #7d9eed; 
             font-family: "Dancing Script", cursive;
         }
 
@@ -36,8 +36,8 @@
         }
 
         .envelope {
-            width: 250px; /* Aumentado o tamanho do envelope */
-            height: 175px; /* Aumentado o tamanho do envelope */
+            width: 250px; 
+            height: 175px;
             background-color: white;
             border: 2px solid black;
             position: relative;
@@ -55,40 +55,40 @@
             left: 0;
             width: 0;
             height: 0;
-            border-left: 125px solid transparent; /* Aumentado para manter o equilíbrio */
-            border-right: 125px solid transparent; /* Aumentado para manter o equilíbrio */
-            border-bottom: 85px solid white; /* Aumentado para combinar com o tamanho do envelope */
+            border-left: 125px solid transparent; 
+            border-right: 125px solid transparent; 
+            border-bottom: 85px solid white; 
         }
 
         .coracao {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 28px; /* Aumentado o tamanho do coração */
+            font-size: 28px; 
             color: red;
         }
 
         .carta {
             display: none;
-            width: 450px; /* Aumentado o tamanho da carta */
-            padding: 40px; /* Aumentado o padding para mais espaço interno */
+            width: 450px; 
+            padding: 40px; 
             background-color: #fef2e0;
             border: 2px solid #b38b6d;
             border-radius: 10px;
             text-align: center;
             font-family: "Dancing Script", cursive;
-            font-size: 26px; /* Aumentado o tamanho do texto */
+            font-size: 26px; 
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            line-height: 1.6; /* Melhorar o espaçamento entre as linhas */
+            line-height: 1.6; 
         }
 
         .mensagem {
             position: absolute;
-            bottom: 30px; /* Colocado no canto inferior */
+            bottom: 30px; 
             right: 30px;
             font-size: 20px;
             font-weight: bold;
@@ -96,12 +96,12 @@
         }
 
         .botao-fechar {
-            margin-top: 10px; /* Ajustado o espaçamento do botão */
-            padding: 8px 15px; /* Aumentei o tamanho do botão */
+            margin-top: 10px; 
+            padding: 8px 15px;
             background-color: #ff6b6b;
             color: white;
             border: none;
-            font-size: 16px; /* Aumentei o tamanho da fonte do botão */
+            font-size: 16px; 
             cursor: pointer;
             border-radius: 8px;
             font-weight: bold;
@@ -122,9 +122,10 @@
     </div>
 
     <div class="carta" id="carta">
-        <p>Querida Nathália,</p>
-        <p>Que tal uma cerveja e um bom papo qualquer dia desses? </p>
+        <p>Gabriela, meu amor,</p>
+        <p>Espero que seu dia termine bem, curta seu docinho! </p>
         <div class="mensagem">
+            Com carinho,
             Beijos, <br>A.
         </div>
         <button class="botao-fechar" onclick="fecharCarta()">Fechar</button>
